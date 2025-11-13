@@ -60,7 +60,7 @@ function App() {
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
               <div className="flex-shrink-0">
                 <img
-                  src="IMG_0844.JPG"
+                  src="/IMG_0844.JPG"
                   alt="Profile"
                   className="w-48 h-48 rounded-full object-cover border-4 border-cyan-500/30 shadow-lg shadow-cyan-500/20"
                   style={{ objectPosition: '20% 80%' }}
