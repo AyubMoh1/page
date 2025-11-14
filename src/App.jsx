@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import SimplePipeline from './SimplePipeline'
-import { Linkedin, Mail, Zap, GitBranch, BarChart3 } from 'lucide-react'
+import { Linkedin, Mail, Zap, GitBranch, BarChart3, Target, Layers, Shield, Workflow, CheckCircle2, Rocket } from 'lucide-react'
 
 function App() {
   const pipelineRef = useRef(null)
@@ -56,11 +56,11 @@ function App() {
       <section className="relative py-12 px-4">
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="p-8 md:p-10 rounded-2xl bg-gradient-to-br from-zinc-900/60 to-zinc-950/60 border border-zinc-800/50 backdrop-blur-sm">
-            <h2 className="text-3xl font-bold mb-6 text-white">About Me</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white text-center">About Me</h2>
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
               <div className="flex-shrink-0">
                 <img
-                  src={`${import.meta.env.BASE_URL}IMG_0844.JPG`}
+                  src={`${import.meta.env.BASE_URL}IMG_08445.JPG`}
                   alt="Profile"
                   className="w-48 h-48 rounded-full object-cover border-4 border-cyan-500/30 shadow-lg shadow-cyan-500/20"
                   style={{ objectPosition: '20% 80%' }}
@@ -133,6 +133,143 @@ function App() {
                   {skill}
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What I Can Do For You Section */}
+      <section className="relative py-16 px-4">
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              What I Can Do For You
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Build quality into your development process with automated testing frameworks that scale from embedded IoT devices to full-stack applications.
+            </p>
+            <div className="mt-4 flex items-center justify-center gap-2 text-cyan-400">
+              <Shield size={20} />
+              <span className="text-sm font-semibold tracking-wide">Make quality easy to maintain and impossible to ignore</span>
+            </div>
+          </div>
+
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Testing Strategies Column */}
+            <div className="relative p-8 rounded-2xl bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 border border-zinc-800/50 backdrop-blur-sm group hover:border-cyan-500/30 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/20">
+                    <Target className="text-cyan-400" size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Testing Strategies</h3>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    { icon: Layers, title: 'Unit & Integration Testing', desc: 'Catch bugs before they compound' },
+                    { icon: Workflow, title: 'End-to-End Testing', desc: 'Validate complete user workflows' },
+                    { icon: Shield, title: 'Black Box & White Box Testing', desc: 'Comprehensive coverage from all angles' },
+                    { icon: CheckCircle2, title: 'Regression Testing', desc: 'Ensure new features don\'t break existing functionality' },
+                    { icon: GitBranch, title: 'API & Contract Testing', desc: 'Validate service boundaries' },
+                    { icon: BarChart3, title: 'Performance & Load Testing', desc: 'Know your limits before your users do' },
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3 group/item">
+                      <div className="mt-1 text-cyan-400/60 group-hover/item:text-cyan-400 transition-colors">
+                        <item.icon size={18} />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-white text-sm mb-1">{item.title}</h4>
+                        <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Pipeline Integration Column */}
+            <div className="relative p-8 rounded-2xl bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 border border-zinc-800/50 backdrop-blur-sm group hover:border-blue-500/30 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                    <Rocket className="text-blue-400" size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">CI/CD Integration</h3>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    {
+                      icon: CheckCircle2,
+                      title: 'Pre-Merge Validation',
+                      desc: 'Every MR gets tested automatically before it touches main',
+                      badge: 'Shift-Left'
+                    },
+                    {
+                      icon: Zap,
+                      title: 'Feature Testing',
+                      desc: 'Targeted test suites for rapid iteration',
+                      badge: 'Fast Feedback'
+                    },
+                    {
+                      icon: Shield,
+                      title: 'Full Release Testing',
+                      desc: 'Comprehensive validation before deployment',
+                      badge: 'Quality Gates'
+                    },
+                    {
+                      icon: BarChart3,
+                      title: 'Continuous Monitoring',
+                      desc: 'Catch issues in production before they become incidents',
+                      badge: 'Observability'
+                    },
+                  ].map((item, index) => (
+                    <div key={index} className="group/item p-4 rounded-lg bg-zinc-900/50 border border-zinc-800/50 hover:border-blue-500/30 hover:bg-zinc-900/80 transition-all">
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 text-blue-400/60 group-hover/item:text-blue-400 transition-colors">
+                          <item.icon size={18} />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <h4 className="font-semibold text-white text-sm">{item.title}</h4>
+                            <span className="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-medium">
+                              {item.badge}
+                            </span>
+                          </div>
+                          <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Impact Statement */}
+          <div className="relative p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 border border-cyan-500/20">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <div className="hidden md:block w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0">
+                  <Rocket className="text-white" size={24} />
+                </div>
+                <div>
+                  <h4 className="text-white font-bold text-lg mb-1">The Impact</h4>
+                  <p className="text-gray-300 text-sm">
+                    Faster releases • Fewer rollbacks • Happier developers • Customers who trust your product
+                  </p>
+                </div>
+              </div>
+              <div className="flex-shrink-0">
+                <div className="px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/20">
+                  Quality as a Competitive Advantage
+                </div>
+              </div>
             </div>
           </div>
         </div>
