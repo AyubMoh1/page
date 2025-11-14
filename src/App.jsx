@@ -250,28 +250,6 @@ function App() {
               </div>
             </div>
           </div>
-
-          {/* Bottom Impact Statement */}
-          <div className="relative p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 border border-cyan-500/20">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <div className="hidden md:block w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0">
-                  <Rocket className="text-white" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold text-lg mb-1">The Impact</h4>
-                  <p className="text-gray-300 text-sm">
-                    Faster releases • Fewer rollbacks • Happier developers • Customers who trust your product
-                  </p>
-                </div>
-              </div>
-              <div className="flex-shrink-0">
-                <div className="px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/20">
-                  Quality as a Competitive Advantage
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

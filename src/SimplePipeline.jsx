@@ -433,9 +433,6 @@ export default function SimplePipeline({ autoStart = false }) {
                                 </div>
                                 <div className="text-[8px] text-gray-400">{job.label}</div>
                               </div>
-                              <button className="text-gray-500 hover:text-gray-300">
-                                <RotateCw size={10} />
-                              </button>
                             </div>
                           </div>
                         );
