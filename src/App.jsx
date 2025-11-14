@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import SimplePipeline from './SimplePipeline'
-import { Linkedin, Mail, Zap, GitBranch, BarChart3, Target, Layers, Shield, Workflow, CheckCircle2, Rocket } from 'lucide-react'
+import { Linkedin, Mail, Zap, GitBranch, BarChart3, Target, Layers, Shield, Workflow, CheckCircle2, Rocket, MapPin, Code2, ThumbsUp } from 'lucide-react'
 
 function App() {
   const pipelineRef = useRef(null)
@@ -43,8 +43,10 @@ function App() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 px-4">
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-6xl md:text-7xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent leading-tight">
-            Senior QA Developer
+          <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Senior </span>
+            <span className="bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent">QA</span>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent"> Developer</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 font-light tracking-wide max-w-2xl mx-auto">
             Test Automation • CI/CD • Quality Engineering
@@ -60,7 +62,7 @@ function App() {
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
               <div className="flex-shrink-0">
                 <img
-                  src={`${import.meta.env.BASE_URL}IMG_08445.JPG`}
+                  src={`${import.meta.env.BASE_URL}IMG_0844.JPG`}
                   alt="Profile"
                   className="w-48 h-48 rounded-full object-cover border-4 border-cyan-500/30 shadow-lg shadow-cyan-500/20"
                   style={{ objectPosition: '20% 80%' }}
@@ -149,10 +151,6 @@ function App() {
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Build quality into your development process with automated testing frameworks that scale from embedded IoT devices to full-stack applications.
             </p>
-            <div className="mt-4 flex items-center justify-center gap-2 text-cyan-400">
-              <Shield size={20} />
-              <span className="text-sm font-semibold tracking-wide">Make quality easy to maintain and impossible to ignore</span>
-            </div>
           </div>
 
           {/* Two Column Layout */}
@@ -262,9 +260,38 @@ function App() {
 
       {/* Contact Section */}
       <section className="relative py-16 px-4">
-        <div className="max-w-2xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl font-bold mb-3 text-white">Let's Connect</h2>
-          <p className="text-gray-400 mb-10">Open to new opportunities and collaborations</p>
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl font-bold mb-8 text-white">Let's Connect</h2>
+
+          <div className="mb-10 p-6 rounded-xl bg-zinc-900/80 border border-zinc-800/50 backdrop-blur-sm text-left max-w-2xl mx-auto">
+            <h3 className="text-lg font-semibold text-white mb-4 text-center">Before You Reach Out</h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3 group/item">
+                <div className="mt-1 text-cyan-400 flex-shrink-0">
+                  <MapPin size={20} />
+                </div>
+                <p className="text-gray-300 text-sm">
+                  I only accept <span className="text-white font-semibold">remote positions</span>, ±2 hours Central European Time
+                </p>
+              </div>
+              <div className="flex items-start gap-3 group/item">
+                <div className="mt-1 text-cyan-400 flex-shrink-0">
+                  <Code2 size={20} />
+                </div>
+                <p className="text-gray-300 text-sm">
+                  During my career I've never had to do any coding test, but I'll do a <span className="text-white font-semibold">1v1 coding battle vs your best developer</span>
+                </p>
+              </div>
+              <div className="flex items-start gap-3 group/item">
+                <div className="mt-1 text-cyan-400 flex-shrink-0">
+                  <ThumbsUp size={20} />
+                </div>
+                <p className="text-gray-300 text-sm">
+                  For references you can contact my current boss, but <span className="text-white font-semibold">he will fight you over me</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
